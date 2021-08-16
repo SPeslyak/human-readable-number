@@ -13,6 +13,6 @@ module.exports = function toReadable (number) {
     if((9 < ((tens * 10) + units)) && (((tens * 10) + units)) < 20) units = tens * 10 + units;
     hundreds = ((hundreds === 0) ? '' : `${unitsArray[hundreds]} hundred `);
 
-    result = hundreds + tensArray[tens] + unitsArray[units];
+    result = (hundreds + tensArray[tens] + unitsArray[units]).trim();
     return result;
 }
